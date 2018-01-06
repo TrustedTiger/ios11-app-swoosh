@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="App_Swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="App_Swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,18 +95,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="swoosh" destination="Ufg-TX-bEE" id="hO4-7v-kRx"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-842.39999999999998" y="-478.11094452773619"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="EQS-Tv-ndX">
             <objects>
-                <viewController id="vcC-n7-JxN" sceneMemberID="viewController">
+                <viewController id="vcC-n7-JxN" customClass="LeagueVC" customModule="App_Swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sgf-qE-U98">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,6 +172,9 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="vcC-n7-JxN" eventType="touchUpInside" id="I6w-s3-A48"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKU-M2-K8Y">
                                 <rect key="frame" x="0.0" y="30" width="29" height="24"/>
@@ -207,16 +207,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XyC-UB-PZS"/>
                     </view>
+                    <connections>
+                        <segue destination="hEm-br-R02" kind="show" identifier="skillVCSegue" id="taq-so-9qt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpS-ik-vCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="sbs-Sv-eBr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-158" y="-478"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="imw-2l-y0v">
             <objects>
-                <viewController id="hEm-br-R02" sceneMemberID="viewController">
+                <viewController id="hEm-br-R02" customClass="SkillVC" customModule="App_Swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h68-g0-Ulh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
